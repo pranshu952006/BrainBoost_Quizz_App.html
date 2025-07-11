@@ -1,0 +1,199 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(214, 225, 240);
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Front Page Styles */
+.front-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.front-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.85);
+  animation: zoomIn 3s ease forwards;
+  transition: transform 0.5s ease;
+}
+
+.front-image:hover {
+  transform: scale(1.05);
+}
+
+/* Slide up animation for front page */
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+/* Quiz Page Styles */
+.quiz-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('front.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Quiz container */
+.quiz-container {
+  background: white;
+  display: block;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 10%;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 0 12px rgba(4, 4, 0, 1.1);
+  /* Add fade-in animation */
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+button {
+  width: 30%;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#options {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#otherInput {
+  padding: 8px;
+  margin-top: 10px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#options button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#options button:hover {
+  background-color: #45a049;
+}
+
+#options button:active {
+  transform: scale(0.95);
+}
+
+#options:hover {
+  background: #d5d5d5;
+}
+
+.quiz-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#questionBox {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result {
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 185px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
